@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  font-family: "Liberation Serif";
+  font-weight: 400;
+}
+
+.for_all_button {
+  margin: 100px;
+}
+
+.pos_but {/*по центру из выставим родительского блока for all button*/
+  text-align: center;
+}
+
+.button {
+  margin: 10px;/*для того чтобы оступ у всех был друг от друга*/
+  border: 0;/*уберем границу*/
+  color: #dfdfdf;
+  padding: 12px 30px;
+  border-radius: 3px;
+}
+
+
+#button1 {
+  position: relative;
+  background-color: #f14223;
+  transition:.2s ease;/*плавный переход*/
+}
+#button1::before, 
+#button1::after{
+display:block;
+content: "";
+position: absolute;
+z-index: 100;
+width:0;
+height: 3px;
+background-color: #ffbb00;/*цвета полосок*/
+transition: .2s linear;
+}
+#button1::before{
+  top:0;
+  right:0;
+}
+#button1::after{
+  bottom:0;
+  left:0;
+}
+#button1:hover{
+  color: #996565;
+  background-color: #69d113;
+}
+#button1:hover::before,
+#button1:hover::after{
+  width: 100%;/*чтобы полоски до конца ширины доходили*/
+}
+#button1
+#button1:hover {/*при наведении*/
+  color: #e28743;
+  background-color: #eeeee4;
+}
+#button2 {
+  background-color: #1e81b0;
+}
+#button2:hover {
+  box-shadow: -2px -2px 10px rgba(33, 19, 13, .8);/*тень добавляет*/
+}
+#button3 {
+  background-position: top;/*чтобы верхнюю половину видели*/
+  background-size: 100% 200%; /*высота фона в два раза больше фона кнопки*/
+  background-image: linear-gradient(to top, transparent 50%, #008079 50%);/*градиент направлен вверх, нижняя половина прозрачная, transparant со значением 50% половину фона делает прозрачным, вторые 50% покрываются цветом*/
+  transition: background-position .2s linear,
+              color .2s linear;
+}
+
+#button3:hover {
+  color: #21130d;/*цет тектса*/
+  background-position: bottom;/*меняет верхнюю половину на нижнюю*/
+}
+
+#button4 {/*копия 3 кнопки, только с лево и право*/
+  background-position: left;
+  background-size: 200%;
+  background-image: linear-gradient(to left, transparent 50%, #eab676 50%);
+
+  transition: background-position .2s linear,
+              color .2s linear;
+}
+#button4:hover {
+  color: #21130d;
+  background-position: right;
+}
+#button5 {
+  background-color: #023511;
+  transition: background-color .2s linear;
+}
+#button5:hover {
+  background-color: #0a9611;/*смена фона на более светлый*/
+}

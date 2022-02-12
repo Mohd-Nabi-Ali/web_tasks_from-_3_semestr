@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-size: 18px;
+  font-weight: 400;
+  color: #636363;
+  background: linear-gradient(45deg, #0dd7fb, #c10feb);/*фон*/
+}
+
+.main {
+  max-width: 1528px;/*для карточек*/
+  margin: 150px auto 0 auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;/*пространство между карточками*/
+}
+
+.container:hover .card:not(:hover) {/*если наводим на контейнер, то убирает остальные, так как они не тронуты*/
+  filter: blur(10px);/*замазывает их, те , которые не тронуты, радиус 20px*/
+}
+
+.card {
+  width: 320px;
+  overflow: hidden;/*отображает наш полукруг внутри картчки, только части на карточке*/
+
+  border-radius: 18px;
+  padding-bottom: 30px;
+
+  background-color: #fff;
+  box-shadow: 0 0 25px #250033;
+
+  transition: transform .2s linear,
+              filter .2s linear;
+}
+
+.card:hover {
+  transform: scale(2, 1.5);/*при наведении увеличиваем карточку, первое ширина, второе высота*/
+}
+
+.our_up {
+  position: relative;
+}
+
+.number_of_card {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 7;
+
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+}
+
+.circle {/*наши круги внутри карточек*/
+  position: absolute;
+  top: 0;
+  left: 50%;/*чтобы по центру по горизонали была точка середины круга*/
+  transform: translate(-50%, -50%);/*нам надо их сдвинуть, и чтобы идеальный полукруг был, то по 50% убираем по горизонтали и вертикали*/
+  width: 110%;/*при 100% не будет занимать всю часть верха, так как радиус сужается, а при 115 в ширину нормально*/
+  height: 300px;
+
+  font-size: 0;
+  border-radius: 50%;
+}
+
+.text_all {
+  padding-top: 150px;/*оступ для текста*/
+}
+
+.card__text {
+  padding: 0 15px;
+  text-align: center;
+}
+
+.card__button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.card__link {
+  color: #fff;
+  text-decoration: none;
+
+  padding: 12px 25px;
+  border-radius: 25px;
+}

@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+
+  font-size: 18px;
+  font-family: "Liberation Serif";
+  font-weight: 400;
+}
+
+/* Анимация  */
+@keyframes slider_one {/*для переходов*/
+  0%, 15% {
+    left: 0;
+  }
+
+  20%, 35% {
+    left: -1560px;
+  }
+
+  40%, 55% {
+    left: -3120px;
+  }
+
+  60%, 75% {
+    left: -4680px;
+  }
+
+  80%, 95% {
+    left: -6240px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.slider_one {/*для текущего слайда*/
+  max-width: 1200px;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.slider__line {/*для всех слайдов*/
+  display: flex;
+  position: relative;
+  width: 7800px;
+  animation-name: slider_one;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.slider__item {
+  position: relative;
+}
+
+.slider__controls {
+  position: absolute;
+  z-index: 100;
+
+  bottom: 45px;
+  left: 35px;
+}
+
+.slider__button {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  outline: 0;
+
+  font-size: 0;
+  box-shadow: 0 0 10px black;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  background-color: teal;
+
+  margin-left: 3px;
+  transition: background-color .2s linear;
+}
+
+.slider__button.active,
+.slider__button:hover {
+  background-color: darkseagreen;
+}
+
+.slider__button:first-child {
+  margin-left: 0;
+}
+
+.item__photo {
+  width: 100%;
+}
+
+
+.item__image {
+  display: block;
+  width: 100%;
+}
+
+.item__desc {
+  position: absolute;
+
+  top: 50%;
+  left: 35px;
+
+  z-index: 100;
+
+  color: white;
+  text-shadow: 1px 5px 5px black;
+
+  width: 500px;
+}
