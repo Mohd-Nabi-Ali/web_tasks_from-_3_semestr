@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+.square {
+position: relative;/*родительский блок, от него толкаемся по сторам и поизиционеруем всё, в нашем случае contex*/
+width: 50%;/*50% экрана, указ в процентах работает по ширине экрана, меняем ширинуу, меняется квадрат*/
+}
+.square:after { background: #0000ff;/*используется вместе со square,используется для вывода квадрата, без него квадрата не будет*/
+content: "";/*обязательно с after должно испоьзоваться*/
+display: block;/*чтобы как блочный элемент был*/
+padding-bottom: 100%;/*меняем, увеличивается*/
+}
+.content{
+font-family: "Arial Black";
+position : absolute; /*за место отвечает внутри блока square*/
+top : 0;
+bottom : 0;
+left : 0;
+right : 0;
+margin: auto; /*за выравниваение по середине квадрата*/
+color:white;
+height : 0%;/*относительно родителя, в нашем случае:square(сам квадрат), если уберем, то надпись уйдёт вверх*/
+text-align: center;/*за центр по ширине*/
+}
+</style>
+</head>
+<body>
+<div class="square"> <div class="content"> Привет </div> </div>
+</body>

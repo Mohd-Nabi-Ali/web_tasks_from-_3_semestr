@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>box-shadow</title>
+<style>
+.input{ margin-bottom: 10px; } /*Устанавливает величину отступа от нижнего края элемента*/
+/* invalid псевдокласс отвечает за корректность введеных ответов в формы,span:before отвечает за появление либо звездочки 9 строка либо за галочку 12 строка отвечает 9 и 10 строка за появление звездочки*/
+input[id="name"]:invalid + span:before, input[id="age"]:invalid + span:before,input[id="job"]:invalid + span:before{ color: red; content: "\2732";
+padding-left: 5px; } 
+/*отвечает за появление галочки*/
+input[id="name"]:valid + span:before,input[id="age"]:valid + span:before,input[id="job"]:valid + span:before{ color: green; content: "\2714";
+padding-left: 5px; }
+</style>
+</head>
+<body>
+<div>
+<form action="#">
+<p><label>Имя пользователя:</label>
+<input type="text" name="name" id="name" required><span></span></p>
+<p><label>Сколько вам лет?:</label>
+<input type="number" id="age" required><span></span></p>
+<p><label>Вы учитесь или работаете?</label>
+<input type="text" id="job" required><span></span></p>
+<p> <label>Что вы обычно делаете в свободное время?</label>
+<input type="text" name="text" id="text"><span></span></p>
+<p><input type="submit" required></p>
+</form>
+</div>
+</body>
+</html>
