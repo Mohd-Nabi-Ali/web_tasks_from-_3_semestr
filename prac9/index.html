@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<main class="main">
+  <div class="container">
+      <div class="task__content">
+        <span id="clock" class="clock"></span>
+      </div>
+    <div class="task">
+      <div class="task__content">
+        <div class="todo-app">
+          <form action="/" class="form">
+            <input type="text" name="todo" class="input" placeholder="Введите задачу"><!--поле для ввода-->
+            <button type="button" id="add" name="add" class="button">+</button><!--добавление-->
+          </form>
+          <div class="todo-list">
+            <ul id="todos" class="todos"></ul>
+          </div>
+
+        </div>        
+      </div>     
+    </div>
+
+  </div>
+</main>
+
+<script src="./js/date.js"></script>
+<script src="./js/todo.js"></script>
+
+</body>
+
+</html>

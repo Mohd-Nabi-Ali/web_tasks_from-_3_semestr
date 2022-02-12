@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+
+  font-size: 17px;
+  font-family: "Liberation Serif";
+  font-weight: 400;
+
+  color: #000000;
+  background-color: #ffffff;
+}
+button {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  outline: 0;
+  background: none;
+
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+
+  color: inherit;
+}
+.main {
+  margin-top: 50px;
+}
+.container {
+  max-width: 1304px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+.task {
+  margin-top: 25px;
+}
+.task:first-child {
+  margin-top: 0;
+}
+.task__title {
+  margin: 0;
+}
+.clock {
+  font-size: 30px;
+}
+.instructions,
+.form {
+  text-align: center;
+}
+.instruction {
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+.form {
+  margin: 20px 0;
+}
+.input {
+  max-width: 800px;
+  width: 100%;
+  font-size: 20px;
+  color: #010002;
+  border: 1px solid black;
+  outline: 0;
+  background-color: #ffffff;
+  padding: 9px 15px;
+  transition: border-color .2s linear;
+}
+
+.button {
+  margin: 0;
+  padding: 10px 15px;
+
+  border: 0;
+  outline: 0;
+
+  font-size: 20px;
+
+  color: #e8e6ec;
+  background-color: #ff8800;
+
+  cursor: pointer;
+  transition: background-color .2s linear;
+}
+.button:hover {
+  background-color: #376560;
+}
+.todos {
+  max-width: 700px;
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 19px;
+  background-color: #48a1b1;
+}
+
+#remove {
+  box-shadow: 0 0 5px black;
+}
