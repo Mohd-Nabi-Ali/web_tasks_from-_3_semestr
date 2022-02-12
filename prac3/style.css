@@ -1,0 +1,62 @@
+#text{/*через id*/
+    background: lawngreen;
+}
+.q.m{/*чдля элементов с 2 классами одновременно*/
+    background: rgb(160, 60, 60);
+}
+div>a{/*сработает только для тегов "a", которые внутри div*/
+    background: lightseagreen;
+}
+div p{/*сработает только для тегов "p", которые внутри div*/
+    background: maroon;
+}
+div+a{/*сработает только для тегов "a", которые на одном уровне с div*/
+    background: magenta;
+}
+*{/*за всё отвечает*/
+    margin-top: 10px;
+}
+div p.class1{/*сработает только для тегов "p", которые внутри div с классом class1*/
+background: midnightblue;
+}
+a[href]{/*сработает только для тегов "a", которые с атрибутом href*/
+   color:rgb(70, 51, 180); 
+}
+a{/*сработает только для тегов "a"*/
+    color:rgb(70, 51, 180); 
+ }
+ a[href="ma"]{/*сработает только для тегов "a" с атрибутом href со значением ma*/
+     color: seagreen;
+ }
+ a[href="#"]:hover{/*сработает только для тегов "a" с атрибутом href*/
+    text-decoration: underline;
+    color:green;
+}
+nav>p:hover{/*сработает только для тегов "a", которые внутри div*/
+    background: darkgoldenrod;
+}
+.class6:focus{
+    box-shadow:0 0 10px rgba(0,0,0,0.8 );
+    }
+.list li:first-child{/*сработает только для 1 элемента списка*/
+    color:purple;
+    text-decoration: underline;
+}
+.list li:last-child{/*сработает только для последнего элемента списка*/
+    color:purple;
+    font-size: 15px;
+    text-decoration: underline;
+}
+.list li:nth-child(2){
+    color:purple;
+    text-decoration: underline;
+}
+address{/*сработает только для тегов "a", которые внутри div*/
+    background: lightseagreen;
+}
+address>p{/*сработает только для тегов "a", которые внутри div*/
+    background: lightseagreen;
+}
+#mapplace{
+    font-size: 13px;
+}
