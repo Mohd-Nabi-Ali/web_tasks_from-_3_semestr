@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+    * {
+        box-sizing: border-box;/*чтобы всё нормально поменялось*/
+        color: rgb(0, 0, 0);
+    }
+    header {
+        display: flex;
+        flex-direction: row;/*Главная ось направлена так же, как и ориентация текста, по умолчанию слева направо. */
+        justify-content: space-between;/*Флексы равномерно распределяются по всей строке. Первый и последний элемент прижимаются к соответствующим краям контейнера.*/
+        align-items: center;/*по центру выстраиваются*/
+        border: rgba(0, 0, 0, 0.5) solid 4px;
+        border-radius: 4px;
+        padding: 15px;
+        width: 80%;
+        margin: auto;
+    }
+    @media (min-width: 600px) {
+        .unfold {/*класс кнопки*/
+            display: none;/*не показывается пока меньше 600px*/
+        }
+        .menu {
+            display: flex;/*ставит все элементы в строку, как флексы*/
+            flex-direction: row;/*Главная ось направлена так же, как и ориентация текста, по умолчанию слева направо.*/
+            column-gap: 10px;/*Задаёт расстояние между колонками*/
+        }
+    }
+    @media (max-width: 600px) {
+        .unfold {
+            display: block;/*меняем на block, чтобы отображалось как блочный элемент*/
+        }
+        .menu {
+            display: none;/*меню в строку пропадает*/
+        }
+        .menu.active {/*чтобы когда кликал меню выпадало*/
+            display: flex;
+            flex-direction: column;/*Главная ось располагается вертикально и направлена сверху вниз.*/
+            position: absolute;
+            top: 12%;
+            left: 40%;
+            row-gap: 10px;/*устанавливает расстояние между строками*/
+        }
+        .unfold {/*кнопка*/
+            width: 30px;
+            height: 30px;
+            background-image: url("https://cdn-icons.flaticon.com/png/128/5608/premium/5608381.png?token=exp=1637177953~hmac=57d8424cde4b69cfce59de7daec3cd98");
+            background-size: cover;/*Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.*/
+        }
+    }</style>
+</head>
+<body>
+    <header>
+        <span>Logo</span>
+        <nav class="menu" id="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contacts</a>
+        </nav>
+        <button type="button" id="unfold" class="unfold" onclick="unfold()"></button>
+    </header>
+    <script>
+        var x = 0;
+function unfold() {
+    x++;/*значения чередуются(1 и 0)  за счёт 79 строки*/
+    menu.classList.toggle("active");/*активируем класс, который отвечает за меню, без него текста не будет при нажатии на меню кнопки*/
+    if (x == 1)/*случай когда мы показываем нам крест*/
+        document.getElementById("unfold").style = "background-image: url('https://cdn-icons-png.flaticon.com/128/59/59254.png')";
+    else/*случай, когда мы возвращаем всё на место*/
+        document.getElementById("unfold").style = "background-image: url('https://cdn-icons.flaticon.com/png/128/5608/premium/5608381.png?token=exp=1637177953~hmac=57d8424cde4b69cfce59de7daec3cd98')";
+    x = x % 2;
+}  
+    </script>
+</body>
+</html>

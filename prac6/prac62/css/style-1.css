@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;/*чтобы блок адаптировался под изменение экрана*/
+}
+.container {
+  display: flex;
+  justify-content: space-between;/*Первый и последний элемент прижимаются к соответствующим краям контейнера.*/
+  width: 100%;
+  max-width: 300px;
+  margin: 25px auto 0 auto;
+  padding: 10px 15px;
+  border: 2px solid #64b8df;
+  border-radius: 8px;
+}
+@media (max-width: 700px) {
+  .container {
+    align-items: center;
+    flex-direction: column;/*Главная ось располагается вертикально и направлена сверху вниз.*/
+  }
+}

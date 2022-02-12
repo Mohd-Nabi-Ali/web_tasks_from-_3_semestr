@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;/*ширина контейнера*/
+  max-width: 1000px;/*максимальный размер*/
+  margin: auto;
+  padding: 0px;
+  display: grid;/*чтобы заработал контейнер*/
+  grid-template-columns: repeat(3, 1fr);/*для того чтобы ровно по пространству столбцы были*/
+  grid-template-rows: repeat(3, 1fr);/*для того чтобы ровно по пространству строки были*/
+  grid-gap: 3px;/*общая дальность расстояния между строками и столбцами*/
+}
+
+.A,/*общие характеристики для всех блоков*/
+.B,
+.C,
+.D,
+.E {
+  border: 2px solid #ff3300;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.A {
+  grid-column-start: 1;/*определяет, по оси x, старт с 1*/
+  grid-column-end: 3;/*определяет, на какой будет заканчиваться*/
+}
+
+.B {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.C {
+  grid-column-start: 3;
+  grid-column-end: 4;
+
+  grid-row-start: 2;/*определяется по оси y, старт с 1*/
+  grid-row-end: 4;
+}
+
+@media (max-width:700px) {
+  .container {
+    grid-template-columns: 50% 50%;/*так как уже будет 2 колонки*/
+  }
+
+  .B,
+  .E {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .C,
+  .D {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .C {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .D {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}

@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;/*чтобы отступы охранялись и всё нормально переслось*/
+}
+
+.container {
+  width: 100%;
+  height: 700px;
+  max-width: 1000px;/*макс размер по ширине*/
+  margin:  auto;
+  display: grid;/*для того чтобы контейнер заработал*/
+  grid-template-columns: 30% 70%;
+}
+.right {
+  margin-left: 5px;
+}
+.left,.right {
+  display: flex;/*чтобы не было блока, ставим flex, чтобы вдоль одной оси x, а не под друг другом*/
+  justify-content: center;/*все флексы выравниваются по центру строки*/
+  align-items: center;/*чтобы выравниваем по поперечной оси выстраивалось, в нашем случает текст"Lefr and Right"*/
+  border: 2px solid #fa0000;/*границы*/
+  border-radius: 5px;/*углы*/
+  font-size: 25px;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 700px) {/*пока ширина экрана не превышает число, будут выполняться свойства ниже*/
+  .container {
+    grid-template-columns: none;/*позволяет нам получать нужный реультат при уменьшии экрана, мы получаем Right под Left*/
+  }
+
+  .right {
+    margin: 5px 0 0 0;
+  }
+}
+
+
+
