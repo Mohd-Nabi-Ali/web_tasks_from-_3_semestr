@@ -1,0 +1,80 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.7rem;
+  font-family: "Arial";
+  font-weight: 400;
+
+  color: #fdfdfd;
+  background-color: #2a198a;
+}
+
+p,
+h1 {
+  margin: 0;
+}
+
+input,
+button {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  outline: 0;
+  background: none;
+
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+
+.main {
+  padding-top: 35px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.all_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 12px 0;
+  border-radius: 30px;
+
+  color: #2a198a;
+  background-color: #fdfdfd;
+}
+
+.content {
+  flex-basis: 25%;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+}

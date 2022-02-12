@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="./css/1.css">
+</head>
+
+
+<body>
+  
+<div class="container">
+  <header class="header">
+    <h1 class="title">Капча на JS</h1>
+  </header>
+
+  <div class="content">
+    <form action="/" class="form">
+      <div class="generator">
+        <div class="fon_cap" style="background-color: red;">
+          <div class="capcha">
+            <span class="capcha__text" id="capcha-text"></span>
+          </div>
+        </div>
+        
+
+        <button type="button" id="generator" class="button">&#8635;</button>
+      </div>
+
+      <div class="checker">
+        <div class="field">
+          <input type="text" class="input" id="input" placeholder="Введите капчу">
+          <button type="button" id="checker" class="button">Проверить</button>
+        </div>
+
+        <div class="message">
+          <span class="message__text" id="message-text"></span>
+        </div>
+      </div>
+    </form>
+  </div> 
+</div> 
+
+<script src="./js/1.js"></script>
+
+</body>
+
+</html>

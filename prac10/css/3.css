@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.7rem;
+  font-family: "Arial";
+  font-weight: 400;
+
+  color: black;
+  background-color: green;
+}
+
+p,
+h1 {
+  margin: 0;
+}
+
+input,
+button {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  outline: 0;
+  background: none;
+
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+
+
+.main {
+  padding-top: 25px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+
+
+.search {/*поле для поиска*/
+  width: 55px;
+  overflow-x: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: black;
+  background-color: white;
+
+  border: 5px solid #000000;
+  border-radius: 35px;
+
+  margin: 0 auto;
+  padding: 10px;
+
+  transition: width .2s linear;
+}
+
+.search.active {
+  width: 300px;
+}
+
+
+
+.button1 {/*лупа*/
+  font-size: 0;
+  padding-right: 10px;
+}
+
+.button1::after {
+  display: block;
+  content: "";
+
+  width: 25px;
+  height: 25px;
+
+  background-size: cover;
+  background-image: url("../imgs/search_icon.png");
+
+  background-position: center;
+}
+
+
+
+.crest {/*крест*/
+  display: block;
+  position: relative;
+color: rgb(0, 0, 0);
+  font-size: 0;
+
+  width: 25px;
+  height: 25px;
+}
+
+.crest::before,/*создаём две полоски, и с помощью псевдоклассов поварачиваем их под углом 45 в разные стороны*/
+.crest::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+background-color: black;
+
+}
+
+.crest::before {
+  transform: rotate(45deg);
+
+}
+
+.crest::after {
+  transform: rotate(-45deg);
+
+}

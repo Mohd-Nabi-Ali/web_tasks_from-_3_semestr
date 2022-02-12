@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.7rem;
+  font-family: "Arial";
+  font-weight: 400;
+
+  color: black;
+  background-color: #eedb9d;
+}
+
+p,
+h1 {
+  margin: 0;
+}
+
+input,
+button {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  outline: 0;
+  background: none;
+
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  80% { transform: rotate(0deg); }
+  85% { transform: rotate(5deg); }
+  95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.main {
+  padding-top: 35px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.container1 {
+  width: 330px;
+  text-align: center;
+
+  margin: 0 auto;
+  padding: 12px;
+
+  color: black;
+  background-color: white;
+
+  transition: all .2s linear;
+}
+
+.container1.incorrect {/*3 раза анимация производится*/
+  animation: wiggle .2s infinite;
+}
+
+.title {
+  color: black;
+}
+
+.element {
+  margin-top: 15px;
+}
+
+.element:first-child {
+  margin-top: 0;
+}
+
+.input {
+  width: 100%;
+  color: black;
+
+  border: 2px solid blue;
+  padding: 8px;
+
+  transition: border-color .2s linear;
+}
+
+.input:focus {
+  border-color: #00c3ff;
+}
+
+.message {
+  color: #4f0e52;
+}
+
+.button {
+  width: 100%;
+  color: white;
+
+  padding: 10px;
+  background-color: #4b0355;
+
+  transition: background-color .2s linear;
+}
+
+.button:hover {
+  background-color: #dd7b6a;
+}
