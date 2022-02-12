@@ -1,0 +1,44 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    border:0%;
+}
+
+nav ul{
+    list-style: none;
+    background-color:rgb(105, 221, 144);
+}
+nav >ul>li{
+    float:left;
+}
+nav ul li a{
+    display:inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(184, 230, 59);
+    width: 125px;
+}
+nav ul li a:hover{
+    background-color: brown;
+}
+nav ul ul{
+    display: none;
+    position: absolute;
+}
+nav ul li:hover ul{
+    display: block;
+}
+.block{
+    background:#18b5a4;
+height: 300px;
+border-radius: 15px;
+box-shadow:0 0 10px #000;
+}
+h1 {
+    font-size:40px;
+    color:coral;
+}
+p{
+    font-size:20px;
+    color:khaki; 
+}

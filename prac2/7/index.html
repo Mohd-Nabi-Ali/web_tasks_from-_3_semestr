@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Canvas в HTML5</title>
+    </head>
+    <body>
+      <h1>Мохд Наби Али</h1>
+      <br>
+    <canvas id="canvas" style="display:block;">smt </canvas>
+    <script>
+      var
+      canv= document.getElementById('canvas'),
+      ctx=canv.getContext('2d');
+      canv.width=window.innerWidth;
+      canv.height=window.innerHeight; 
+     ctx.fillStyle='red';
+      ctx.fillRect(30,30,300,120);
+      ctx.fillStyle='blue';
+      ctx.fillRect(40,40,280,90);
+    </script>
+    </body>
+</html>
+
+<!--круг
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Canvas в HTML5</title>
+    </head>
+    <body>
+      <h1>Мохд Наби Али</h1>
+      <br>
+    <canvas id="canvas" style="display:block;">smt </canvas>
+    <br>
+    <br>
+    <script>
+      var
+      canv= document.getElementById('canvas'),
+      ctx=canv.getContext('2d');
+     canv.width=window.innerWidth;
+     canv.height=window.innerHeight;
+     ctx.beginPath();
+    ctx.arc(400,400,50,0,Math.PI*2);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(400,400,10,0,Math.PI*2);
+    ctx.fillStyle="#ff0000";
+    ctx.stroke();
+    </script>
+    </body>
+</html>
+
+
+
+треугольник
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Canvas в HTML5</title>
+    </head>
+    <body>
+      <h1>Мохд Наби Али</h1>
+      <br><br><br><br><br><br><br><br><br>
+    <canvas id="canvas" style="display:block;">smt </canvas>
+    <br>
+    <br>
+    <script>
+      var
+      canv= document.getElementById('canvas'),
+      ctx=canv.getContext('2d');
+      canv.width=window.innerWidth;
+      canv.height=window.innerHeight;
+ctx.beginPath();
+ctx.moveTo(50,50);
+ctx.lineTo(5,120);
+ctx.lineTo(100,120);
+ctx.closePath();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(50,60);
+ctx.lineTo(30,90);
+ctx.lineTo(70,90);
+ctx.closePath();
+ctx.stroke();
+    </script>
+    </body>
+</html>-->
